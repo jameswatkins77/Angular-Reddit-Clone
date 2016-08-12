@@ -1,0 +1,46 @@
+<html ng-app="myApp">
+<body ng-cloak class="ng-cloak" >
+	<div class="wrapper">
+		<div class="header">
+			<div class="main-logo">
+        <h1 class="tag-line">MadLibs</h1>
+        <small>This is a project inspired by Thinkful's course: "Learning Angular.Js"</small>
+        <br />
+        <small>Creating Animations with ngAnimate</small>
+			</div>
+		</div>
+		<!-- FORM -->
+		<form class="interaction" ng-controller="LibsCtrl" ng-submit='submitted=true; submit();' name="myForm">
+			<!-- Form Inputs -->
+			<div class="animate-form" ng-hide="formInputs">
+				<h2 ng-view class="view-animation">Provide the following words:</h2>
+				<div class="info">
+					<input type="text" placeholder="female name"         ng-model="data.firstName"           name="myName" 					required="">
+					<input type="text" placeholder="Job Title"           ng-model="data.jobTitle"            name="myJobTitle" 			required="">
+					<input type="text" placeholder="Tedious task"        ng-model="data.tediousTask"         name="myTediousTask"		required="">
+					<input type="text" placeholder="Dirty task"          ng-model="data.dirtyTask"           name="myDirtyTask" 		required="">
+					<input type="text" placeholder="Celebrity"           ng-model="data.celebrity"           name="myCelebrity" 		required="">
+					<input type="text" placeholder="Useless skill"       ng-model="data.uselessSkill"        name="myUselessSkill" 	required="">
+					<input type="text" placeholder="Obnoxious celebrity" ng-model="data.obnoxiousCelebrity"  name="myOC" 						required="">
+					<input type="number" placeholder="Huge number"       ng-model="data.hugeNumber"          name="myHugeNumber" 		required="">
+					<input type="text" placeholder="Adjective"           ng-model="data.adjective"           name="myAdjective" 		required="">
+				</div>
+				<button class="btn-generate" type="submit">Generate My Mad Lib</button>
+			</div>
+
+			<!-- MadLib Generated Content -->
+			<div class="content animate-content" ng-hide="madLib">
+				<p>
+					<span class="name">{{data.firstName}}</span> was a <span>{{data.jobTitle}}</span> who loved technology. Although she loved parts of her job, she absolutely hated <span>{{data.tediousTask}}</span> and <span>{{data.dirtyTask}}</span>. So, <span class="name">{{data.firstName}}</span> met with her life mentor <span class="name">{{data.celebrity}}</span> who told her to learn how to <span>{{data.uselessSkill}}</span> with Thinkful.
+					<br>
+					Thinkful didn't offer a course on <span>{{data.uselessSkill}}</span> so she studied programming instead.
+				</p>
+	 			<p>
+					What a great decision! With her new skills, <span class="name">{{data.firstName}}</span> built a(n) <span>{{data.adjective}}</span> robot named <span class="name">{{data.obnoxiousCelebrity}}</span> that not only loved <span>{{data.dirtyTask}}</span> but did it <span>{{data.hugeNumber | number}}</span> times faster.
+				</p>
+				<button class="btn-start-over" type="reset" ng-click="startOver();">Start Over</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html ng-app="pingPongApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="main6.css">
+  </head>
+  <body ng-controller="pingPongTracker">
+    <h1>Ping Pong Scorekeeper</h1>
+    <div class="player_div" ng-class="{green : view.score.player1 == 11, red : view.score.player2 == 11}">
+      <button ng-click="counterLeft()">Player 1</button>
+      <h2>{{view.score.player1}}</h2>
+      <h3 ng-show=view.server>Serving</h3>
+    </div>
+    <div class="player_div" ng-class="{green : view.score.player2 == 11, red : view.score.player1 == 11}">
+      <button ng-click="counterRight()">Player 2</button>
+      <h2>{{view.score.player2}}</h2>
+      <h3 ng-show=!view.server>Serving</h3>
+    </div>
+    <button ng-show="view.score.player1 == 11 || view.score.player2 == 11" ng-click="reset()">Reset</button>
+    <h3>The div was entered {{view.enterCount}} times</h3>
+    <button ng-click="replay()">Replay Colors</button>
+    <div class="divbox" ng-style="divColor" ng-mouseenter="changeColor()">
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js" type="text/javascript"></script>
+  <script src="main6.js" type="text/javascript"></script>
+</html>

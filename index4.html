@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="firstApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div ng-controller="ExercisesController">
+      <h1>My favorite color is: {{FavColor}}</h1>
+      <h3>Number of seconds in a century: {{secondsInACentury() | number}}</h3>
+      <h3>{{rightNow()}}</h3>
+      <h2><input type="text" ng-model="exclamation" value="" placeholder="exclamation">! He said <input type="text" ng-model="adverb" value="" placeholder="adverb"> as he jumped into his <input type="text" ng-model="noun" value="" placeholder="noun"> and drove off with his <input type="text" ng-model="adjective" value="" placeholder="adjective"> wife.</h2>
+      <h2>{{exclamation}}! He said {{adverb}} as he jumped into his {{noun}} and drove off with his {{adjective}} wife.</h2>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js" type="text/javascript"></script>
+  <script src="app4.js" type="text/javascript"></script>
+</html>

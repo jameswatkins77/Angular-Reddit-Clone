@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="madLibs" ng-controller="MadLibsController">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div>
+      <h1>Please fill out the following:</h1>
+      <hr>
+      <h2>Boy's Name:</h2>
+      <input type="text" placeholder="Enter a boy's name..." value="" ng-model="boys_name">
+      <h2>Adjective:</h2>
+      <input type="text" placeholder="Enter an adjective..." value="" ng-model="adjective">
+      <h2>Plural Noun:</h2>
+      <input type="text" placeholder="Enter a plural noun..." value="" ng-model="plural_noun">
+      <h2>Plural Noun:</h2>
+      <input type="text" placeholder="Enter a plural noun..." value="" ng-model="plural_noun2">
+      <h2>An insect, plural:</h2>
+      <input type="text" placeholder="Enter an insect, plural..." value="" ng-model="insect_plural">
+      <h2>Plural Noun:</h2>
+      <input type="text" placeholder="Enter a plural noun..." value="" ng-model="plural_noun3">
+      <h2>A verb ending in "s":</h2>
+      <input type="text" placeholder="Enter a verb ending in 's'..." value="" ng-model="verb">
+      <input type="submit" name="name" value="Generate!" ng-click="generate()">
+    </div>
+    <div>
+      <h1>Mad with the Libs</h1>
+      <hr>
+      <h2>I'm in love with {{boys_name_final}}.  He's so {{adjective_final}}!  He has big flat {{plural_noun_final}}, and when our {{plural_noun2_final}} meet, I get {{insect_plural_final}} in my stomach.  I've fallen for him like a ton of {{plural_noun3_final}}, and he {{verb_final}} me, too.  But I think he's got another girlfriend, what should I do?</h2>
+      <input type="submit" name="name" value="Start Over!" ng-click="remove()">
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js" type="text/javascript"></script>
+  <script src="main5.js" type="text/javascript"></script>
+</html>

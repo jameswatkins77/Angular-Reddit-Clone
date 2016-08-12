@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ greeting }} World</title>
+  </head>
+  <body>
+    <p>{{1 + 6}}<p>
+    <br>
+    <p>Say something to the world <input type="text" ng-model="greeting" ng-init="greeting='Hello, '"></p>
+    <p>{{ greeting }} world!</p>
+    <input type="text" placeholder="What is your name?" ng-model="name" value="BoJack">
+    <h1>My name is: {{name}}</h1>
+    <select  ng-model="animal">
+      <option>Dogs</option>
+      <option>Cats</option>
+      <option>Dogs and Cats</option>
+      <option>Neither</option>
+    </select>
+    <h3>I love {{animal}}</h3>
+    <h3>The array [99,43,22] is {{ [99,43,22].length }} items long.</h3>
+    <h3>My name is {{"BoJack" +  " Horseman"}}</h3>
+    <h3>{{3.14159265359}}</h3>
+    <h3>Is currency {{3.14159265359 | currency}}</h3>
+    <h3>Is currency {{3.14159265359 | currency: "€"}}</h3>
+    <input type="text" ng-model="yell_whisper" value="">
+    <h3>Yelling: {{ yell_whisper | uppercase }}</h3>
+    <h3>Whisper: {{ yell_whisper | lowercase }}</h3>
+    <h3>{{3.14159265359 | number:3}}</h3>
+    <h3>{{3.14159265359 | number:6}}</h3>
+    <h3>{{3.14159265359 | number:1}}</h3>
+    <h2>How many digits of pie do you want?</h2>
+    <select  ng-model="digit">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+    </select>
+    <h3>{{pie}}</h3>
+    <h3>{{3.14159265359 | number:digit}}
+    <h1>Tip Calculator</h1>
+    <h2>How much did your meal cost? <input type="number" name="name" value="" ng-model="subtotal"></h2>
+    <h2>How much do you want to tip? <select  ng-model="tip">
+      <option value=.1>10%</option>
+      <option value=.15>15%</option>
+      <option value=.20>20%</option>
+    </select></h2>
+    <h2>Subtotal: {{ subtotal | currency}}</h2>
+    <h2>Tip: {{ subtotal * tip | currency}}</h2>
+    <h2>Total: {{subtotal + (subtotal * tip) | currency}}</h2>
+    <div>{{this}}</div>
+    <h2><input type="text" ng-model="exclamation" value="" placeholder="exclamation">! He said <input type="text" ng-model="adverb" value="" placeholder="adverb"> as he jumped into his <input type="text" ng-model="noun" value="" placeholder="noun"> and drove off with his <input type="text" ng-model="adjective" value="" placeholder="adjective"> wife.</h2>
+    <h2>{{exclamation}}! He said {{adverb}} as he jumped into his {{noun}} and drove off with his {{adjective}} wife.</h2>
+  </body>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+</html>

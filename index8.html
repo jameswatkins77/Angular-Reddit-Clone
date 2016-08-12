@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="formValidation">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="main8.css">
+  </head>
+  <body ng-controller="formValidator">
+    <form action="#" name="newForm">
+      <label for="username">Username: </label>
+      <input type="text" name="username" required ng-model='object.username' ng-minlength=3 required ng-maxlength=12>
+        <p ng-show='newForm.username.$valid === false && newForm.username.$dirty'>please enter a valid username</p>
+      <label for="password">Password: </label>
+      <input type="password" name="password" required ng-minlength=3 ng-maxlength=12 ng-model='object.answer'>
+        <p ng-show='newForm.password.$valid === false && newForm.password.$dirty'>please enter a valid password</p>
+      <label for="email">Email: </label>
+      <input type="email" name="email" ng-model='object.email' required ng-minlength=1>
+        <p ng-show='newForm.email.$valid === false && newForm.email.$dirty'>please enter a valid password</p>
+      <label for="zip_code">Zip Code: </label>
+      <input type="number" name="zip_code" required ng-maxlength=5 ng-minlength=5 ng-model='object.zip_code'>
+        <p ng-show='newForm.zip_code.$valid === false && newForm.zip_code.$dirty'>zip code must be 5 digits</p>
+      <input type="submit" value="Click me!">
+    </form>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js" type="text/javascript"></script>
+  <script src="app8.js" type="text/javascript"></script>
+</html>

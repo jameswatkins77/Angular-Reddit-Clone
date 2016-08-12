@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="contactApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="main7.css">
+  </head>
+  <body ng-controller="contactCreater">
+    <form ng-submit="submitContact()" name="createContactForm">
+      <input type="text" name="street_address1" value="" ng-model="newContact.name_input">Name
+      <input type="email" name="zip_code" value="" ng-model="newContact.email">Email
+      <input type="tel" name="name" value="" ng-model="newContact.phone">Phone Number
+      <input type="submit" value="Submit">
+    </form>
+    <div>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+        </tr>
+        <tr ng-repeat='contact in contacts'>
+          <td ng-mouseenter="changeColor()" ng-mouseleave="returnColor()"  ng-style="tdColor">{{contact.nameA_input}}</td>
+          <td ng-mouseenter="changeColor()" ng-mouseleave="returnColor()" ng-style="tdColor">{{contact.emailA}}</td>
+          <td ng-mouseenter="changeColor()" ng-mouseleave="returnColor()" ng-style="tdColor">{{contact.phoneA}}</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js" type="text/javascript"></script>
+  <script src="main7.js" type="text/javascript"></script>
+</html>

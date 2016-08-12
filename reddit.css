@@ -1,0 +1,45 @@
+body{
+  height: 100vh;
+}
+.container {
+    width: 100vw;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
+}
+.picture{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #F6F4F6;
+}
+.info{
+    flex: 4;
+    background-color: #F6F4F6;
+}
+.image{
+  height: 80%;
+  width: 80%;
+  margin-left: 10%;
+}
+.author{
+  margin-left: 90%;
+}
+.red{
+  color: red;
+}
+.green{
+  color: green;
+}
+.form_input{
+  margin-left: 1%;
+  margin-bottom: 1%;
+}
+.btn{
+  margin-left: 1%;
+  margin-bottom: 1%;
+}

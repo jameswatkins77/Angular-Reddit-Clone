@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="main2.css">
+  </head>
+  <body ng-init="numbers=[1,1,2,5,6,9,9,9]">
+    <ul>
+      <li ng-repeat='number in numbers track by $index'>
+        {{number}}
+      </li>
+    </ul>
+    <div ng-show='3 + 4 == 5'>
+      3 + 4 isn't 5, don't show
+    </div>
+
+    <div ng-show='3 + 4 == 7'>
+      3 + 4 is 7, do show
+    </div>
+
+    <div ng-hide='3 + 4 == 5'>
+        3 + 4 isn't 5, don't hide
+    </div>
+
+    <div ng-hide='3 + 4 == 7'>
+      3 + 4 is 7, do hide
+    </div>
+    <h1>Sign up page:</h1>
+    <input type="password" name="name" value="" ng-model="password" ng-class="{green : password.length > 5, red : password.length < 6}">
+    <h2 ng-class="{green : password.length > 5, red : password.length < 6}">Your password is {{password.length}} characters</h2>
+    <h3 ng-show='password.length < 6'> Invalid Password</h3>
+    <input type="submit" ng-show='password.length > 5' value='Sign Up!' >
+    <div ng-class='{highlight: 4 + 4 == 8}'> 4 + 4 = 8</div>
+    <div ng-class='{highlight: 4 + 4 == 10}'>4 + 4 = 10</div>
+  </body>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+</html>
