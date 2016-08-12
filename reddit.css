@@ -3,7 +3,6 @@ body{
 }
 .container {
     width: 100vw;
-    height: 30%;
     display: flex;
     flex-direction: row;
     margin-bottom: 2%;
@@ -11,7 +10,7 @@ body{
 .picture{
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content:flex-start;;
     align-content: center;
     flex-direction: column;
     text-align: center;
@@ -20,11 +19,14 @@ body{
 .info{
     flex: 4;
     background-color: #F6F4F6;
+    padding: 2%;
 }
 .image{
-  height: 80%;
-  width: 80%;
+  height: 200px;
+  width: 240px;
   margin-left: 10%;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 .author{
   margin-left: 90%;
